@@ -6,9 +6,9 @@ using Microsoft.Office.Tools.Ribbon;
 
 namespace DTO
 {
-    public partial class RibbonDTO
+    public partial class RibbonDTONewMail
     {
-        private void ribbonDTO_Load(object sender, RibbonUIEventArgs e)
+        private void RibbonNewMailTab_Load(object sender, RibbonUIEventArgs e)
         {
 
         }

@@ -172,9 +172,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ribbonDTO.resx">
-      <DependentUpon>ribbonDTO.cs</DependentUpon>
+    <EmbeddedResource Include="RibbonNewCalendarTab.resx">
+      <DependentUpon>RibbonNewCalendarTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonDTO.resx">
+      <DependentUpon>RibbonDTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonNewMailTab.resx">
+      <DependentUpon>RibbonNewMailTab.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DTO_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -185,11 +192,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ribbonDTO.cs">
+    <Compile Include="Ribbon.cs">
+      <XmlRibbon>true</XmlRibbon>
+    </Compile>
+    <Compile Include="RibbonNewCalendarTab.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ribbonDTO.Designer.cs">
-      <DependentUpon>ribbonDTO.cs</DependentUpon>
+    <Compile Include="RibbonNewCalendarTab.Designer.cs">
+      <DependentUpon>RibbonNewCalendarTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonDTO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonDTO.Designer.cs">
+      <DependentUpon>RibbonDTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonNewMailTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonNewMailTab.Designer.cs">
+      <DependentUpon>RibbonNewMailTab.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -217,6 +239,7 @@
     <Content Include="Resources\document_text_edit.ico" />
     <Content Include="Resources\document_text_add.ico" />
     <Content Include="Resources\server_settings_32.ico" />
+    <EmbeddedResource Include="Ribbon.xml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
