@@ -63,6 +63,16 @@ namespace DTO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap browser_window_settings_32 {
+            get {
+                object obj = ResourceManager.GetObject("browser_window_settings_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_text_edit {
             get {
                 object obj = ResourceManager.GetObject("document_text_edit", resourceCulture);
@@ -73,9 +83,29 @@ namespace DTO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_text_settings_32 {
+            get {
+                object obj = ResourceManager.GetObject("document_text_settings_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_mail {
             get {
                 object obj = ResourceManager.GetObject("open-mail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap server_settings_32 {
+            get {
+                object obj = ResourceManager.GetObject("server_settings_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

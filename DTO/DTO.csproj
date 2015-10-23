@@ -172,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RibbonDTOmain.resx">
       <DependentUpon>RibbonDTOmain.cs</DependentUpon>
@@ -209,10 +210,13 @@
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\browser_window_settings_32.ico" />
+    <None Include="Resources\document_text_settings_32.ico" />
     <Content Include="Resources\open-mail.ico" />
     <Content Include="Resources\document_text.ico" />
     <Content Include="Resources\document_text_edit.ico" />
     <Content Include="Resources\document_text_add.ico" />
+    <None Include="Resources\server_settings_32.ico" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
