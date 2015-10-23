@@ -173,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RibbonDTOmain.resx">
+      <DependentUpon>RibbonDTOmain.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DTO_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,6 +184,12 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonDTOmain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonDTOmain.Designer.cs">
+      <DependentUpon>RibbonDTOmain.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
