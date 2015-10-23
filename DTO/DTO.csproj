@@ -173,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ribbonDTO.resx">
+      <DependentUpon>ribbonDTO.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -180,6 +183,12 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ribbonDTO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ribbonDTO.Designer.cs">
+      <DependentUpon>ribbonDTO.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -197,7 +206,12 @@
     <Folder Include="Forms\Datasets\" />
     <Folder Include="Help\Helpfiles\" />
     <Folder Include="Reports\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\open-mail.ico" />
+    <Content Include="Resources\document_text.ico" />
+    <Content Include="Resources\document_text_edit.ico" />
+    <Content Include="Resources\document_text_add.ico" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
