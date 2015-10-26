@@ -27,17 +27,40 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>DTO</RootNamespace>
     <AssemblyName>DTO</AssemblyName>
-    <LoadBehavior>3</LoadBehavior>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>en</TargetCulture>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>DTO</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>DTO</FriendlyName>
+    <OfficeApplicationDescription />
+    <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
       <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
@@ -160,31 +183,58 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Forms\Datasets\DataSetMSGtypes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMSGtypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_MSGtyp_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MSGtyp_Settings.Designer.cs">
+      <DependentUpon>Frm_MSGtyp_Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalTasksFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Frm_MSGtyp_Settings.resx">
+      <DependentUpon>Frm_MSGtyp_Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RibbonDTOmain.resx">
       <DependentUpon>RibbonDTOmain.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="DTO_TemporaryKey.pfx" />
+    <None Include="Forms\Datasets\DataSetMSGtypes.xsc">
+      <DependentUpon>DataSetMSGtypes.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Datasets\DataSetMSGtypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMSGtypes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\Datasets\DataSetMSGtypes.xss">
+      <DependentUpon>DataSetMSGtypes.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RibbonDTOmain.cs">
       <SubType>Component</SubType>
@@ -204,19 +254,36 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Forms\Datasets\" />
     <Folder Include="Help\Helpfiles\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\browser_window_settings_32.ico" />
-    <None Include="Resources\document_text_settings_32.ico" />
+    <Content Include="Data\DTOlocalDATABASE.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DTOlocalDATABASE_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DTOlocalDATABASE.mdf</DependentUpon>
+    </Content>
+    <Content Include="Resources\browser_window_settings_32.ico" />
+    <Content Include="Resources\document_text_settings_32.ico" />
+    <Content Include="Resources\Icons\browser_window_settings_32.ico" />
+    <Content Include="Resources\Icons\Delete.ico" />
+    <Content Include="Resources\Icons\document_text.ico" />
+    <Content Include="Resources\Icons\document_text_add.ico" />
+    <Content Include="Resources\Icons\document_text_edit.ico" />
+    <Content Include="Resources\Icons\document_text_settings_32.ico" />
+    <Content Include="Resources\Icons\EditForm.ico" />
+    <Content Include="Resources\Icons\EditItem.ico" />
+    <Content Include="Resources\Icons\information_frame.png" />
+    <Content Include="Resources\Icons\NewDatabaseForm.ico" />
+    <Content Include="Resources\Icons\open-mail.ico" />
+    <Content Include="Resources\Icons\server_settings_32.ico" />
     <Content Include="Resources\open-mail.ico" />
     <Content Include="Resources\document_text.ico" />
     <Content Include="Resources\document_text_edit.ico" />
     <Content Include="Resources\document_text_add.ico" />
-    <None Include="Resources\server_settings_32.ico" />
+    <Content Include="Resources\server_settings_32.ico" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

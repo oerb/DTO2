@@ -95,7 +95,7 @@ namespace DTO.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap open_mail {
             get {
-                object obj = ResourceManager.GetObject("open-mail", resourceCulture);
+                object obj = ResourceManager.GetObject("open_mail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
