@@ -16,5 +16,23 @@ namespace DTO.Forms
         {
             InitializeComponent();
         }
+
+        private void tsb_create_msgtyp_Click(object sender, EventArgs e)
+        {
+            Forms.Frm_MSGtype frm_New_MSGTYPE = new Frm_MSGtype(this, "new");
+            DialogResult result = frm_New_MSGTYPE.ShowDialog();
+        }
+
+        private void tsb_edit_Click(object sender, EventArgs e)
+        {
+            Forms.Frm_MSGtype frm_New_MSGTYPE = new Frm_MSGtype(this, "edit");
+            DialogResult result = frm_New_MSGTYPE.ShowDialog();
+        }
+
+        private void tsb_delete_Click(object sender, EventArgs e)
+        {
+            Forms.Frm_MSGtype frm_New_MSGTYPE = new Frm_MSGtype(this, "delet");
+            DialogResult result = frm_New_MSGTYPE.ShowDialog();
+        }
     }
 }

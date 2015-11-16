@@ -35,12 +35,12 @@
             this.tsb_edit = new System.Windows.Forms.ToolStripButton();
             this.tsb_delete = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet1 = new DTO.Forms.Datasets.DataSet1();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new DTO.Forms.Datasets.DataSet1();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -63,6 +63,7 @@
             this.tsb_create_msgtyp.Name = "tsb_create_msgtyp";
             this.tsb_create_msgtyp.Size = new System.Drawing.Size(60, 24);
             this.tsb_create_msgtyp.Text = "Neu";
+            this.tsb_create_msgtyp.Click += new System.EventHandler(this.tsb_create_msgtyp_Click);
             // 
             // tsb_edit
             // 
@@ -71,6 +72,7 @@
             this.tsb_edit.Name = "tsb_edit";
             this.tsb_edit.Size = new System.Drawing.Size(105, 24);
             this.tsb_edit.Text = "Bearbeiten";
+            this.tsb_edit.Click += new System.EventHandler(this.tsb_edit_Click);
             // 
             // tsb_delete
             // 
@@ -79,6 +81,7 @@
             this.tsb_delete.Name = "tsb_delete";
             this.tsb_delete.Size = new System.Drawing.Size(86, 24);
             this.tsb_delete.Text = "Löschen";
+            this.tsb_delete.Click += new System.EventHandler(this.tsb_delete_Click);
             // 
             // dataGridView1
             // 
@@ -95,15 +98,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(428, 252);
             this.dataGridView1.TabIndex = 1;
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataSet1BindingSource
             // 
             this.dataSet1BindingSource.DataSource = this.dataSet1;
             this.dataSet1BindingSource.Position = 0;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Frm_MSGtyp_Settings
             // 
@@ -118,8 +121,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -188,6 +188,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetMSGtypes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_MSGtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MSGtype.Designer.cs">
+      <DependentUpon>Frm_MSGtype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_MSGtyp_Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Frm_MSGtype.resx">
+      <DependentUpon>Frm_MSGtype.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MSGtyp_Settings.resx">
       <DependentUpon>Frm_MSGtyp_Settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,7 @@
     <Content Include="Resources\Icons\information_frame.png" />
     <Content Include="Resources\Icons\NewDatabaseForm.ico" />
     <Content Include="Resources\Icons\open-mail.ico" />
+    <Content Include="Resources\Icons\SaveItem.ico" />
     <Content Include="Resources\Icons\server_settings_32.ico" />
     <Content Include="Resources\open-mail.ico" />
     <Content Include="Resources\document_text.ico" />
